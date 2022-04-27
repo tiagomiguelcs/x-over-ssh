@@ -14,12 +14,14 @@ THIS IS ONLY FOR DEMONSTRATION AND SHOULD NOT BE USED IN PRODUCTION.
     sudo useradd -m -k "$BPATH/Guest" guest 2> /dev/null
     echo guest:$PASS | sudo chpasswd
   ```
-3. docker exec -it classes-over-ssh-demo /bin/sh
-4. sudo ./0-run-me-first.sh
-5. Exit container.
-6. ssh guest@192.168.1.X
-7. 
+3. ```docker exec -it classes-over-ssh-demo /bin/sh```
+4. Start ssh server as follows: ```/etc/init.d/ssh start```
+5. ```./0-run-me-first.sh```
+6. Exit container.
+7. From the outside of the container type: ```ssh guest@localhost```
+   The password is: ```guest``` and the code is: ```letmein```
+
 # LIMITATIONS
 
-Unable to connect to access point. 
+Unable to connect to access point via WIFI. 
 
