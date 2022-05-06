@@ -14,12 +14,12 @@ THIS IS ONLY FOR DEMONSTRATION AND SHOULD NOT BE USED IN PRODUCTION.
     sudo useradd -m -k "$BPATH/Guest" guest 2> /dev/null
     echo guest:$PASS | sudo chpasswd
   ```
-4. In Misc/run-me.sh replace /usr/bin/useradd with /usr/sbin/useradd 
+4. In Misc/run-me.sh replace ```/usr/bin/useradd``` with ```/usr/sbin/useradd```
 3. ```docker exec -it classes-over-ssh-demo /bin/sh```
 4. Start ssh server as follows: ```/etc/init.d/ssh start```
-5. 
-   ```./Admin/1-create-database.sh```
-   ```./0-run-me-first.sh```
+5. ```.cd home/[x]-over-sh/Admin```
+   ```./1-create-database.sh```
+   ```cd .. && ./0-run-me-first.sh```
 8. Exit container.
 9. From the outside of the container type: ```ssh guest@localhost```
    The password is: ```guest``` and the code is: ```letmein```
