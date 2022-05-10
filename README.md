@@ -12,7 +12,8 @@ Docker files to deploy the classes or tests-over-ssh app via a docker container.
    - A password will be asked for the user ```demo```, in later stages you should use the same password to install a AUR dependency.
 
 # How to Use the Container for a Test or a Class
-1. Access the container: ```sudo docker exec -it tests-over-ssh-demo /bin/sh```
+
+1. Access the container: ```sudo docker exec -it x-over-ssh /bin/sh```
 2. Start the ssh server as follows: ```/usr/sbin/sshd -D &```
 3. Run database installation in the ``Admin`` directory: ```./1-create-database.sh```
 4. Start the test or class: ```./0-run-me-first.sh```
