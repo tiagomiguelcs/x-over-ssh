@@ -9,6 +9,7 @@ Docker files to deploy the classes or tests-over-ssh app via a docker container.
 2. Place the ```students.csv``` inside the ```Admin``` folder of the classes or tests-over-ssh app.
 3. Deploy the docker image and image as follows: ```make```<br/>
    - All dependencies will be installed.
+   - A password will be asked for the user ```demo```, in later stages you should use the same password to install a AUR dependency.
 
 # How to Use the Container for a Test or a Class
 1. Access the container: ```sudo docker exec -it tests-over-ssh-demo /bin/sh```
