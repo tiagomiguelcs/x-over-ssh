@@ -4,10 +4,10 @@ Docker files to deploy the classes or [tests-over-ssh](https://github.com/in4cio
 
 
 # How to Deploy
-
-1. Copy classes or tests-over-ssh to the current directory of the repository.
-2. Place the ```students.csv``` inside the ```Admin``` folder of the classes or tests-over-ssh app.
-3. Deploy the docker image and image as follows: ```make```<br/>
+1. Install Docker.
+2. Copy classes or tests-over-ssh to the current directory of the repository.
+3. Place the ```students.csv``` inside the ```Admin``` folder of the classes or tests-over-ssh app.
+4. Deploy the docker image and image as follows: ```make```<br/>
    - All dependencies will be installed.
    - A password will be asked for the user ```demo```, in later stages you should use the same password to install a AUR dependency.
 
@@ -19,7 +19,7 @@ Docker files to deploy the classes or [tests-over-ssh](https://github.com/in4cio
 4. Start the test or class: ```./0-run-me-first.sh```
    The students can now access the test or class as follows: ```ssh guest@[MACHINE_IP]```<br/>
    - The **ssh password** is ```guest``` and the **code** will be provided by the teacher. For tests, you can use the ```letmein``` code.
-6. You can also monitor the app using the following comand: ```./3-monitor.sh```
+5. You can also monitor the app using the following comand: ```./3-monitor.sh```
 
 More info regarding the usage of the app can be found at https://github.com/in4cio/TestsOverSSH
 
