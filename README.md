@@ -7,7 +7,7 @@ Docker files to deploy the classes or tests-over-ssh app via a docker container.
 
 1. Copy classes or tests-over-ssh to the current directory of the repository.
 2. Place the ```students.csv``` inside the ```Admin``` folder of the classes or tests-over-ssh app.
-3. Deploy the docker image and image as follows: ```make deploy```<br/>
+3. Deploy the docker image and image as follows: ```make```<br/>
    - All dependencies will be installed.
 
 # How to Use the Container for a Test or a Class
