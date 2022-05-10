@@ -1,30 +1,27 @@
 # x-over-ssh
-Docker files to deploy Classes/Tests-over-ssh via a docker image and container. 
 
-THIS IS ONLY FOR DEMONSTRATION AND SHOULD NOT BE USED IN PRODUCTION.
-
+Docker files to deploy the classes or tests-over-ssh app via a docker container.
 
 
-# HOW TO USE
-1. make deploy
-2. Copy classes-over-ssh or tests-over-ssh to current directory of the repository.
-3. Modify file 0-run-me-first.sh and update line 88 to 90 with the following code:
-  ```bash
-    PASS="guest"
-    sudo useradd -m -k "$BPATH/Guest" guest 2> /dev/null
-    echo guest:$PASS | sudo chpasswd
-  ```
-4. In Misc/run-me.sh replace ```/usr/bin/useradd``` with ```/usr/sbin/useradd```
-3. ```docker exec -it classes-over-ssh-demo /bin/sh```
-4. Start ssh server as follows: ```/etc/init.d/ssh start```
-5. ```.cd home/[x]-over-sh/Admin```
-   ```./1-create-database.sh```
-   ```cd .. && ./0-run-me-first.sh```
-8. Exit container.
-9. From the outside of the container type: ```ssh guest@localhost```
-   The password is: ```guest``` and the code is: ```letmein```
+# How to Deploy
+
+1. Copy classes or tests-over-ssh to the current directory of the repository.
+2. Place the ```students.csv``` inside the ```Admin``` folder of the classes or tests-over-ssh app.
+3. Deploy the docker image and image as follows: ```make deploy```<br/>
+   - All dependencies will be installed.
+
+# How to Use the Container for a Test or a Class
+1. Access the container: ```sudo docker exec -it tests-over-ssh-demo /bin/sh```
+2. Start the ssh server as follows: ```/usr/sbin/sshd -D &```
+3. Run database installation in the ``Admin`` directory: ```./1-create-database.sh```
+4. Start the test or class: ```./0-run-me-first.sh```
+   The students can now access the test or class as follows: ```ssh guest@[MACHINE_IP]```<br/>
+   - The **ssh password** is ```guest``` and the **code** will be provided by the teacher. For tests, you can use the ```letmein``` code.
+6. You can also monitor the app using the following comand: ```./3-monitor.sh```
+
+More info regarding the usage of the app can be found at https://github.com/in4cio/TestsOverSSH
 
 # LIMITATIONS
 
-Unable to connect to access point via WIFI. 
+For now, you will not be able to deploy an access point using this arch linux container.
 
