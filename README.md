@@ -1,6 +1,6 @@
 # x-over-ssh
 
-Docker files to deploy the classes or [tests-over-ssh](https://github.com/in4cio/TestsOverSSH) app via a docker container.
+Docker files to deploy the classes or [tests-over-ssh](https://github.com/in4cio/TestsOverSSH) app via a Arch Linux docker container.
 
 
 # How to Deploy
