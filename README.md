@@ -8,7 +8,7 @@ Docker files to deploy the classes or [tests-over-ssh](https://github.com/in4cio
 2. Copy classes or tests-over-ssh to the current directory of the repository.
 3. Place the ```students.csv``` inside the ```Admin``` folder of the classes or tests-over-ssh app.
 4. Place the questions inside the ```staging``` folder of the classes or tests-over-ssh app.
-5. Deploy the docker image and image as follows: ```make```<br/>
+5. Deploy the docker image and container as follows: ```make```<br/>
    - All dependencies will be installed.
    - A password will be asked for the user ```demo```, in later stages you should use the same password to install a AUR dependency.
 
