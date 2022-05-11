@@ -24,7 +24,7 @@ Docker files to deploy the classes or [tests-over-ssh](https://github.com/in4cio
 
 More info regarding the usage of the app can be found at https://github.com/in4cio/TestsOverSSH
 
-# LIMITATIONS
+# Limitations
 
-For now, you will not be able to deploy an access point using this arch linux container.
+For now, you will **not** be **able to deploy an access point** using this arch linux container.
 
